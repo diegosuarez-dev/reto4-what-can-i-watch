@@ -1,0 +1,32 @@
+@import '../../colors.scss';
+.movie, .tv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $darkMovies;
+    .media {
+        width: 48%;
+        text-align: start;
+        margin: 0.5em;
+        padding: 1em;
+        border: 1px solid $darkestMovies;
+        border-radius: 1em;
+        background-color: $lightMovies;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    .media:hover {
+        background-color: $lightestMovies;
+    }
+}
+.tv {
+    background-color: $darkSeries;
+    .media {
+        background-color: $lightSeries;
+        border: 1px solid $darkestSeries;
+    }
+    .media:hover {
+        background-color: $lightestSeries;
+    }
+}
