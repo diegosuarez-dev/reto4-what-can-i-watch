@@ -8,13 +8,11 @@ function reducer(state = initialState, action) {
     switch (action.type) {
         case 'LOAD_TOP10':
             if (action.itemType === 'movie') {
-                console.log(action.items);
                 return {
                     ...state,
                     movies: action.items,
                 };
             } else if (action.itemType === 'tv') {
-                console.log(action.items);
                 return {
                     ...state,
                     series: action.items,
@@ -25,18 +23,20 @@ function reducer(state = initialState, action) {
             /*
             He tenido que almacenar en el mismo array los géneros de películas y los de series porque me he dado cuenta de algunas series que tienen ids de género de película y eso hacía que diera error al renderizar.
             */
-            if (action.itemType === 'movie') {
-                return {
-                    ...state,
-                    genres: state.genres.concat(action.genres) //Hay que evitar duplicados
+            let prevId = [];
+            let newGenres = state.genres.concat(action.genres).filter(
+                //eslint-disable-next-line
+                el => {
+                    if (!prevId.includes(el.id)) {
+                        prevId.push(el.id);
+                        return el;
+                    }
                 }
-            } else if (action.itemType === 'tv') {
-                return {
-                    ...state,
-                    genres: state.genres.concat(action.genres)
-                }
+            );            
+            return {
+                ...state,
+                genres: newGenres
             }
-            break;
         default:
             return state;
     }

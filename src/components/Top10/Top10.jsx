@@ -18,7 +18,6 @@ const Top10 = props => {
         //eslint-disable-next-line
         , [props.match.params.itemType]);
     if (props.match.params.itemType === 'movie') {
-        console.log(props.movies);
         return (
             <div className={props.match.params.itemType}>
                 {
@@ -49,7 +48,6 @@ const Top10 = props => {
             </div>
         );
     } else if (props.match.params.itemType === 'tv') {
-        console.log(props.series);
         return (
             <div className={props.match.params.itemType}>
                 {
