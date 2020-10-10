@@ -21,7 +21,7 @@ function reducer(state = initialState, action) {
             break;
         case 'LOAD_GENRES':
             /*
-            He tenido que almacenar en el mismo array los géneros de películas y los de series porque me he dado cuenta de algunas series que tienen ids de género de película y eso hacía que diera error al renderizar.
+            He comprobado que un mismo género tiene el mismo id tanto para películas como para series, pero la API tiene dos peticiones diferentes para cada una. El problema se dio cuando una serie daba error al renderizar porque tenía ids de género que no aparecían en la respuesta de géneros de serie y que, tras investigarlo, comprobé que sí aparecían en la respuesta de películas. Por lo tanto, almacenándolos todos en el mismo array y evitando los duplicados me aseguro de que se muestran correctamente.
             */
             let prevId = [];
             let newGenres = state.genres.concat(action.genres).filter(
