@@ -6,7 +6,7 @@ const Series = props => {
 
     return (
         <Link to={`/tv/${props.serie.id}`}>
-            <div className="media" key={props.serie.id}>
+            <div className="media">
                 <img src={"https://image.tmdb.org/t/p/w200" + props.serie.poster_path} className="mr-3" alt={`Poster of ${props.serie.name}`}></img>
                 <div className="media-body">
                     <h5 className="mt-0">{props.serie.name}</h5>

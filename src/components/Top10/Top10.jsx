@@ -24,7 +24,7 @@ const Top10 = props => {
             <div className={props.match.params.itemType}>
                 {
                     props.movies.slice(0,10).map(
-                        movie => <Movie movie={movie}/>
+                        movie => <Movie movie={movie} key={movie.id}/>
                     )
                 }
             </div>
@@ -34,7 +34,7 @@ const Top10 = props => {
             <div className={props.match.params.itemType}>
                 {
                     props.series.slice(0,10).map(
-                        serie => <Series serie={serie}/>
+                        serie => <Series serie={serie} key={serie.id}/>
                     )
                 }
             </div>

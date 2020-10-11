@@ -1,0 +1,70 @@
+@import '../../colors.scss';
+article {
+    background-color: $darkMovies;
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 1em;
+        .leftHeader {
+            padding: 1em;
+            width: 35%;
+            border: 1px solid $darkestMovies;
+            border-radius: 1em;
+            background-color: $lightMovies;
+        }
+        .rightHeader {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1em;
+            text-align: start;
+            width: 35%;
+            border: 1px solid $darkestMovies;
+            border-radius: 1em;        
+            background-color: $lightMovies;
+            span {
+                font-size: 2em;
+            }
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        text-align: start;
+        h6 {
+            color: $lightestMovies;
+        }
+        p {
+            border: 1px solid $darkestMovies;
+            border-radius: 1em;        
+            background-color: $lightMovies;
+            padding: 1em;
+        }
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        h4 {
+            color: $lightestMovies;
+        }
+        .recommendations {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            a {
+                all: unset;
+                margin: 0.5em;
+                padding: 1em;
+                border: 1px solid $darkestMovies;
+                border-radius: 1em;        
+                background-color: $lightMovies;
+            }
+            a:hover {
+                background-color: $lightestMovies;
+            }
+        }
+    }
+}

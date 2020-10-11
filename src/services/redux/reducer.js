@@ -1,7 +1,11 @@
 const initialState = {
     movies: [],
     series: [],
-    genres: []
+    genres: [],
+    detailedMovie: {},
+    detailedSeries: {},
+    recommendedMovies: [],
+    recommendedSeries: []
 }
 
 function reducer(state = initialState, action) {
@@ -36,6 +40,26 @@ function reducer(state = initialState, action) {
             return {
                 ...state,
                 genres: newGenres
+            }
+        case 'LOAD_MOVIE_DETAILS':
+            return {
+                ...state,
+                detailedMovie: action.detailedMovie
+            }
+        case 'LOAD_SERIES_DETAILS':
+            return {
+                ...state,
+                detailedSeries: action.detailedSeries
+            }
+        case 'LOAD_RECOMMENDED_MOVIES':
+            return {
+                ...state,
+                recommendedMovies: action.recommendedMovies
+            }
+        case 'LOAD_RECOMMENDED_SERIES':
+            return {
+                ...state,
+                recommendedSeries: action.recommendedSeries
             }
         default:
             return state;
