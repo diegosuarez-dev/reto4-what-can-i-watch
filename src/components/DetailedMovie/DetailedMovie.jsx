@@ -18,7 +18,7 @@ const DetailedMovie = props => {
         //eslint-disable-next-line
         , [props.match.params.movieId]);
     return (
-        <article>
+        <article className="detailedMovie">
             <header>
                 <div className="leftHeader">
                     <h3>{props.detailedMovie.title}</h3>

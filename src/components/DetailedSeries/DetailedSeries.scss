@@ -1,6 +1,6 @@
 @import '../../colors.scss';
-.detailedMovie {
-    background-color: $darkMovies;
+.detailedSeries {
+    background-color: $darkSeries;
     header {
         display: flex;
         flex-direction: row;
@@ -9,9 +9,9 @@
         .leftHeader {
             padding: 1em;
             width: 35%;
-            border: 1px solid $darkestMovies;
+            border: 1px solid $darkestSeries;
             border-radius: 1em;
-            background-color: $lightMovies;
+            background-color: $lightSeries;
         }
         .rightHeader {
             display: flex;
@@ -20,9 +20,9 @@
             padding: 1em;
             text-align: start;
             width: 35%;
-            border: 1px solid $darkestMovies;
+            border: 1px solid $darkestSeries;
             border-radius: 1em;        
-            background-color: $lightMovies;
+            background-color: $lightSeries;
             span {
                 font-size: 2em;
             }
@@ -34,12 +34,19 @@
         padding: 1em;
         text-align: start;
         h6 {
-            color: $lightestMovies;
+            color: $lightestSeries;
         }
         p {
-            border: 1px solid $darkestMovies;
+            border: 1px solid $darkestSeries;
             border-radius: 1em;        
-            background-color: $lightMovies;
+            background-color: $lightSeries;
+            padding: 1em;
+        }
+        ul {
+            list-style: none;
+            border: 1px solid $darkestSeries;
+            border-radius: 1em;        
+            background-color: $lightSeries;
             padding: 1em;
         }
     }
@@ -48,7 +55,7 @@
         flex-direction: column;
         padding: 1em;
         h4 {
-            color: $lightestMovies;
+            color: $lightestSeries;
         }
         .recommendations {
             display: flex;
@@ -59,12 +66,12 @@
                 all: unset;
                 margin: 0.5em;
                 padding: 1em;
-                border: 1px solid $darkestMovies;
+                border: 1px solid $darkestSeries;
                 border-radius: 1em;        
-                background-color: $lightMovies;
+                background-color: $lightSeries;
             }
             a:hover {
-                background-color: $lightestMovies;
+                background-color: $lightestSeries;
             }
         }
     }

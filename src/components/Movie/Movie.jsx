@@ -13,7 +13,7 @@ const Movie = props => {
                     <h6 className="mt-0">Título original: {props.movie.original_title}</h6>
                     <h6 className="mt-0">Fecha de lanzamiento: {props.movie.release_date}</h6>
                     <h6 className="mt-0">Géneros:</h6>
-                    <ul>{props.movie.genre_ids.map(
+                    <ul>{props.movie.genre_ids?.map(
                         gId => (
                             <li key={props.movie.id + gId}>
                                 {props.genres.filter(mGen => mGen.id === gId)[0].name}

@@ -13,7 +13,7 @@ const Series = props => {
                     <h6 className="mt-0">Título original: {props.serie.original_name}</h6>
                     <h6 className="mt-0">Primera emisión: {props.serie.first_air_date}</h6>
                     <h6 className="mt-0">Géneros:</h6>
-                    <ul>{props.serie.genre_ids.map(
+                    <ul>{props.serie.genre_ids?.map(
                         sgId => (
                             <li key={props.serie.id + sgId}>
                                 {props.genres.filter(sGen => sGen.id === sgId)[0].name}

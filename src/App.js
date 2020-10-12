@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Top10 from './components/Top10/Top10';
 import DetailedMovie from './components/DetailedMovie/DetailedMovie';
+import DetailedSeries from './components/DetailedSeries/DetailedSeries';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/:itemType/top10" component={Top10} exact/>
           <Route path="/movie/:movieId" component={DetailedMovie} exact/>
+          <Route path="/tv/:seriesId" component={DetailedSeries} exact/>
         </Switch>
       </BrowserRouter>      
     </div>
