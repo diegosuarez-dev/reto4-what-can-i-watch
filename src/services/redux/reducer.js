@@ -10,7 +10,7 @@ const initialState = {
 
 function reducer(state = initialState, action) {
     switch (action.type) {
-        case 'LOAD_TOP10':
+        case 'LOAD_RESULTS':
             if (action.itemType === 'movie') {
                 return {
                     ...state,

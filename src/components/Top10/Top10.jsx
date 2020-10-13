@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import axios from "axios";
-import { loadTop10Action, loadGenresAction } from '../../services/redux/actions';
+import { loadResultsAction, loadGenresAction } from '../../services/redux/actions';
 import Movie from '../Movie/Movie';
 import Series from '../Series/Series';
 import './Top10.scss';
@@ -53,7 +53,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    loadTop10: loadTop10Action(dispatch),
+    loadTop10: loadResultsAction(dispatch),
     loadGenres: loadGenresAction(dispatch)
 });
 

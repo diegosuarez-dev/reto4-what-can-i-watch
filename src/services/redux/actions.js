@@ -1,6 +1,6 @@
-export const loadTop10Action = (dispatch) => (itemType, items) => 
+export const loadResultsAction = (dispatch) => (itemType, items) => 
     dispatch({
-        type: 'LOAD_TOP10',
+        type: 'LOAD_RESULTS',
         itemType: itemType,
         items: items
     });
