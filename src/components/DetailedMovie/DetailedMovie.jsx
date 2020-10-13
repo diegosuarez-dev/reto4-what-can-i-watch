@@ -14,6 +14,7 @@ const DetailedMovie = props => {
             `).then(res => props.loadDetailedMovie(res.data)).catch(console.error);
             axios.get(`https://api.themoviedb.org/3/movie/${props.match.params.movieId}/recommendations?api_key=9b4d066eedd374b20d0be2192a5327ec&language=es-ES&page=1
             `).then(res => props.loadRecommendedMovies(res.data.results)).catch(console.error);
+            window.scrollTo(0, 0);
         }
         //eslint-disable-next-line
         , [props.match.params.movieId]);

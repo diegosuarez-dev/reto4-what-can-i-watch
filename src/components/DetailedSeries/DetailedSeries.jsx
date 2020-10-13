@@ -13,6 +13,7 @@ const DetailedSeries = props => {
             axios.get(`https://api.themoviedb.org/3/tv/${props.match.params.seriesId}?api_key=9b4d066eedd374b20d0be2192a5327ec&language=es-ES`).then(res => props.loadDetailedSeries(res.data)).catch(console.error);
             axios.get(`https://api.themoviedb.org/3/tv/${props.match.params.seriesId}/recommendations?api_key=9b4d066eedd374b20d0be2192a5327ec&language=es-ES&page=1
             `).then(res => props.loadRecommendedSeries(res.data.results)).catch(console.error);
+            window.scrollTo(0, 0);
         }
         //eslint-disable-next-line
         , [props.match.params.seriesId]);
