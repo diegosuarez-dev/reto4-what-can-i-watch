@@ -6,6 +6,8 @@ import Top10 from './components/Top10/Top10';
 import DetailedMovie from './components/DetailedMovie/DetailedMovie';
 import DetailedSeries from './components/DetailedSeries/DetailedSeries';
 import SearchResults from './components/SearchResults/SearchResults';
+import Home from './components/Home/Home';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Header/>
         <Switch>
+          <Route path="/" component={Home} exact/>
           <Route path="/:itemType/top10" component={Top10} exact/>
           <Route path="/:itemType/search" component={SearchResults} exact/>
           <Route path="/movie/:movieId" component={DetailedMovie} exact/>
