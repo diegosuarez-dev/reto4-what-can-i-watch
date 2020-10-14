@@ -1,0 +1,51 @@
+@import '../../colors.scss';
+.movieForm, .tvForm {
+    background-color: $darkMovies;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    #name {
+        all: unset;
+        padding: 0.5em;
+        margin: 0.2em 1em;
+        background-color: $lightMovies;
+        border-radius: 0.5em;
+    }
+    label {
+        font-size: small;
+        padding: 0.5em;
+        margin: 0.2em;
+        color: $lightestMovies;
+    }
+    button {
+        all: unset;
+        background-color: $lightMovies;
+        color: $darkestMovies;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        margin: 0.2em 1em;
+        transition: all 0.5s;
+    }
+    button:hover {
+        background-color: $darkestMovies;
+        color: $lightMovies;
+    }
+}
+.tvForm {
+    background-color: $darkSeries;
+    #name {
+        background-color: $lightSeries;
+    }
+    label {
+        color: $lightestSeries;
+    }
+    button {
+        background-color: $lightSeries;
+        color: $darkestSeries;
+    }
+    button:hover {
+        background-color: $darkestSeries;
+        color: $lightSeries;
+    }
+}

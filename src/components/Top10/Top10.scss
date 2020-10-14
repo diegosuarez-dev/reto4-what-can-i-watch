@@ -4,7 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: $darkMovies;
+    background-color: white;
     a {
         all: unset;
         width: 48%;
@@ -16,7 +16,7 @@
             border: 1px solid $darkestMovies;
             border-radius: 1em;
             background-color: $lightMovies;
-            transition: all 0.2s;
+            transition: all 0.5s;
             cursor: pointer;
         }
         .media:hover {
@@ -25,7 +25,7 @@
     }
 }
 .tv {
-    background-color: $darkSeries;
+    background-color: white;
     a {
         .media {
             background-color: $lightSeries;
