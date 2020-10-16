@@ -1,6 +1,7 @@
 const initialState = {
     movies: [],
     series: [],
+    querySent: false,
     genres: [],
     detailedMovie: {},
     detailedSeries: {},
@@ -23,6 +24,11 @@ function reducer(state = initialState, action) {
                 };
             }
             break;
+        case 'QUERY_SENT':
+            return {
+                ...state,
+                querySent: action.querySent
+            }
         case 'LOAD_GENRES':
             /*
             He comprobado que un mismo género tiene el mismo id tanto para películas como para series, pero la API tiene dos peticiones diferentes para cada una. El problema se dio cuando una serie daba error al renderizar porque tenía ids de género que no aparecían en la respuesta de géneros de serie y que, tras investigarlo, comprobé que sí aparecían en la respuesta de películas. Por lo tanto, almacenándolos todos en el mismo array y evitando los duplicados me aseguro de que se muestran correctamente.

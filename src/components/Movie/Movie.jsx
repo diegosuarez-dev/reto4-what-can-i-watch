@@ -16,7 +16,7 @@ const Movie = props => {
                     <ul>{props.movie.genre_ids?.map(
                         gId => (
                             <li key={props.movie.id + gId}>
-                                {props.genres.filter(mGen => mGen.id === gId)[0].name}
+                                {props.genres.filter(mGen => mGen.id === gId)[0]?.name}
                             </li>
                         )
                     )}</ul>

@@ -16,7 +16,7 @@ const Series = props => {
                     <ul>{props.serie.genre_ids?.map(
                         sgId => (
                             <li key={props.serie.id + sgId}>
-                                {props.genres.filter(sGen => sGen.id === sgId)[0].name}
+                                {props.genres.filter(sGen => sGen.id === sgId)[0]?.name}
                             </li>
                         )
                     )}</ul>

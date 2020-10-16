@@ -54,7 +54,7 @@ const DetailedSeries = props => {
                 <ul>{props.detailedSeries.seasons?.map(
                     season => (
                         <li key={props.detailedSeries.id + season.id}>
-                            Nombre: {season.name}
+                            {season.name}
                             <ul>
                                 <li>Fecha estreno: {season.air_date}</li>
                                 <li>Nº episodios: {season.episode_count}</li>

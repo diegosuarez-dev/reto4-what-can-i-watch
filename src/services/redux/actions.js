@@ -5,6 +5,12 @@ export const loadResultsAction = (dispatch) => (itemType, items) =>
         items: items
     });
 
+export const querySentAction = (dispatch) => (querySent) => 
+    dispatch({
+        type: 'QUERY_SENT',
+        querySent: querySent
+    });
+
 export const loadGenresAction = (dispatch) => (itemType, genres) => 
     dispatch({
         type: 'LOAD_GENRES',

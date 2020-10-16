@@ -3,12 +3,12 @@
     background-color: $darkMovies;
     header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         padding: 1em;
+        width: 100%;
         .leftHeader {
             padding: 1em;
-            width: 35%;
             border: 1px solid $darkestMovies;
             border-radius: 1em;
             background-color: $lightMovies;
@@ -18,8 +18,8 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 1em;
+            margin-top: 1em;
             text-align: start;
-            width: 35%;
             border: 1px solid $darkestMovies;
             border-radius: 1em;        
             background-color: $lightMovies;
@@ -33,6 +33,7 @@
         flex-direction: column;
         padding: 1em;
         text-align: start;
+        width: 100%;
         h6 {
             color: $lightestMovies;
         }
@@ -46,14 +47,17 @@
     footer {
         display: flex;
         flex-direction: column;
+        align-items: center;
         padding: 1em;
+        width: 100%;
         h4 {
             color: $lightestMovies;
         }
         .recommendations {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             a {
                 all: unset;
@@ -61,11 +65,42 @@
                 padding: 1em;
                 border: 1px solid $darkestMovies;
                 border-radius: 1em;        
-                background-color: $lightMovies;
-                width: 15%;
+                background-color: $lightMovies;                
+                max-width: 234px;
+                height: 364px;
+                h6 {
+                    max-width: 200px;
+                }
             }
             a:hover {
                 background-color: $lightestMovies;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .detailedMovie {
+        header {
+            flex-direction: row;
+            .leftHeader, .rightHeader {
+                width: 45%;
+                margin-top: 0;
+            }
+        }
+        footer {
+            .recommendations {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .detailedMovie {
+        header {
+            .leftHeader, .rightHeader {
+                width: 40%;
             }
         }
     }

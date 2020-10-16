@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import axios from "axios";
-import { loadResultsAction } from '../../services/redux/actions';
+import { loadResultsAction, querySentAction } from '../../services/redux/actions';
 import './SearchForm.scss';
 
 const SearchForm = props => {
@@ -14,6 +14,7 @@ const SearchForm = props => {
         setName('');
         adultRef.current.checked = false;
         setAdult(false);
+        props.querySent(false);
     },
         //eslint-disable-next-line
         [props.itemType]);
@@ -27,6 +28,7 @@ const SearchForm = props => {
     const handleSubmit = event => {
         event.preventDefault();
         axios.get(`https://api.themoviedb.org/3/search/${props.itemType}?api_key=9b4d066eedd374b20d0be2192a5327ec&language=es-ES&query=${encodeURIComponent(name)}&page=1&include_adult=${adult}`).then(res => props.loadSearch(props.itemType, res.data.results)).catch(console.error);
+        props.querySent(true);
     }
     return (
         <form className={`${props.itemType}Form`} onSubmit={handleSubmit}>
@@ -40,7 +42,8 @@ const SearchForm = props => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    loadSearch: loadResultsAction(dispatch)
+    loadSearch: loadResultsAction(dispatch),
+    querySent: querySentAction(dispatch)
 });
 
 const connectedSearchResults = connect(

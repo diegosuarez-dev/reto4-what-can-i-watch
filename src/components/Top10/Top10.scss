@@ -3,24 +3,60 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     background-color: white;
     a {
         all: unset;
-        width: 48%;
+        width: 100%;
         .media {
             height: 97%;
+            flex-direction: column;
+            align-items: center;
             margin: 0.5em;
             padding: 1em;
             text-align: start;
-            border: 1px solid $darkestMovies;
+            border: 1px solid $lightMovies;
             border-radius: 1em;
             background-color: $lightMovies;
             transition: all 0.5s;
             cursor: pointer;
+            h4 {
+                text-align: center;
+            }
         }
         .media:hover {
             background-color: $lightestMovies;
+        }
+    }
+}
+@media (min-width: 576px) {
+    .movie, .tv {
+        a {
+            .media {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+@media (min-width: 768px)  {
+    .movie, .tv {
+        a {
+            width: 50%;
+            .media {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+@media (min-width: 1024px)  {
+    .movie, .tv {
+        a {
+            .media {
+                flex-direction: row;
+                align-items: flex-start;
+            }
         }
     }
 }
@@ -29,7 +65,7 @@
     a {
         .media {
             background-color: $lightSeries;
-            border: 1px solid $darkestSeries;
+            border: 1px solid $lightSeries;
         }
         .media:hover {
             background-color: $lightestSeries;
