@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/reto4-what-can-i-watch/precache-manifest.a6df1eb5b2b1345269087297361070e8.js"
+  "/reto4-what-can-i-watch/precache-manifest.47f55cdcf7c434f6fdbee819c02181dc.js"
 );
 
 self.addEventListener('message', (event) => {

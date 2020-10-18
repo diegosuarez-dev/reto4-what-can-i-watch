@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "885d370cf826b1b03b7d6e7a894ae456",
+    "revision": "d0964fba46f8407060b72b88c922fbb2",
     "url": "/reto4-what-can-i-watch/index.html"
   },
   {
-    "revision": "a39c618104bb40af4796",
+    "revision": "09442b689402aada62a6",
     "url": "/reto4-what-can-i-watch/static/css/main.6856c631.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reto4-what-can-i-watch/static/js/2.4f50de97.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a39c618104bb40af4796",
-    "url": "/reto4-what-can-i-watch/static/js/main.66ebbb9f.chunk.js"
+    "revision": "09442b689402aada62a6",
+    "url": "/reto4-what-can-i-watch/static/js/main.b4135a9a.chunk.js"
   },
   {
     "revision": "aa5f3e43172e81ed749f",
