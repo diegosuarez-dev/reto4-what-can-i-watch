@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Top10 from './components/Top10/Top10';
 import DetailedMovie from './components/DetailedMovie/DetailedMovie';
@@ -20,6 +20,9 @@ function App() {
           <Route path="/:itemType/search" component={SearchResults} exact/>
           <Route path="/movie/:movieId" component={DetailedMovie} exact/>
           <Route path="/tv/:seriesId" component={DetailedSeries} exact/>
+          <Route path="/reto4-what-can-i-watch/">
+            <Redirect to="/"/>
+          </Route>
         </Switch>
       </BrowserRouter>      
     </div>

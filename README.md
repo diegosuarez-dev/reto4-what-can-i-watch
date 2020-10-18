@@ -11,6 +11,8 @@
 
 Reto final propuesto por el bootcamp de frontend online de GeeksHubsAcademy. Consiste en la elaboración de una webapp con react que permite obtener información detallada sobre series y películas a partir de la API de [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction).
 
+Se puede ver una versión operativa a través de GitHub Pages haciendo clic en el siguiente [enlace](https://diegosuarez-dev.github.io/reto4-what-can-i-watch).
+
 ## Fase actual del desarrollo: Desarrollo finalizado 🚀
 
 La web permite obtener listados de las 10 películas o series más populares, así como realizar búsquedas por título o título original. Una vez obtenidos los resultados, se puede acceder al detalle de la serie o película deseada y ampliar información. Por si fuera poco, se tiene acceso a recomendaciones de títulos similares al consultado.
