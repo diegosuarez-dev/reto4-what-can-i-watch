@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Movie = props => {
 
     return (
-        <Link to={`/movie/${props.movie.id}`}> 
+        <Link to={`/reto4-what-can-i-watch/movie/${props.movie.id}`}> 
             <div className="media">
                 <img src={"https://image.tmdb.org/t/p/w200" + props.movie.poster_path} className="mr-3" alt={`Poster of ${props.movie.title}`}></img>
                 <div className="media-body">

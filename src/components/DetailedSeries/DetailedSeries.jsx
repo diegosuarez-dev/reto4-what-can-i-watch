@@ -69,7 +69,7 @@ const DetailedSeries = props => {
                     {
                         props.recommendedSeries.slice(0, 5).map(
                             recSeries => {
-                                return (recSeries.poster_path ? <Link to={`/tv/${recSeries.id}`} key={recSeries.id}>
+                                return (recSeries.poster_path ? <Link to={`/reto4-what-can-i-watch/tv/${recSeries.id}`} key={recSeries.id}>
                                     <h6>{recSeries.name}</h6>
                                     <img src={"https://image.tmdb.org/t/p/w200" + recSeries.poster_path} alt={`Poster of ${recSeries.name}`}></img>
                                 </Link> : null)

@@ -14,7 +14,7 @@ const Header = props => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <NavLink className="nav-link" to="/" activeClassName="active">Home</NavLink>
+                            <NavLink className="nav-link" to="/reto4-what-can-i-watch/" activeClassName="active">Home</NavLink>
                         </li>
                         <li className="nav-item dropdown">
                             {/*eslint-disable-next-line*/}
@@ -22,9 +22,9 @@ const Header = props => {
                                 Películas
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <NavLink className="dropdown-item" to="/movie/top10">Las 10 más populares</NavLink>
+                                <NavLink className="dropdown-item" to="/reto4-what-can-i-watch/movie/top10">Las 10 más populares</NavLink>
                                 <div className="dropdown-divider"></div>
-                                <NavLink className="dropdown-item" to="/movie/search">Buscar películas</NavLink>
+                                <NavLink className="dropdown-item" to="/reto4-what-can-i-watch/movie/search">Buscar películas</NavLink>
                             </div>
                         </li>
                         <li className="nav-item dropdown">
@@ -33,9 +33,9 @@ const Header = props => {
                                 Series
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <NavLink className="dropdown-item" to="/tv/top10">Las 10 más populares</NavLink>
+                                <NavLink className="dropdown-item" to="/reto4-what-can-i-watch/tv/top10">Las 10 más populares</NavLink>
                                 <div className="dropdown-divider"></div>
-                                <NavLink className="dropdown-item" to="/tv/search">Buscar series</NavLink>
+                                <NavLink className="dropdown-item" to="/reto4-what-can-i-watch/tv/search">Buscar series</NavLink>
                             </div>
                         </li>
                     </ul>

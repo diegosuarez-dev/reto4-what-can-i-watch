@@ -15,13 +15,13 @@ function App() {
       <BrowserRouter>
         <Header/>
         <Switch>
-          <Route path="/" component={Home} exact/>
-          <Route path="/:itemType/top10" component={Top10} exact/>
-          <Route path="/:itemType/search" component={SearchResults} exact/>
-          <Route path="/movie/:movieId" component={DetailedMovie} exact/>
-          <Route path="/tv/:seriesId" component={DetailedSeries} exact/>
-          <Route path="/reto4-what-can-i-watch/">
-            <Redirect to="/"/>
+          <Route path="/reto4-what-can-i-watch/" component={Home} exact/>
+          <Route path="/reto4-what-can-i-watch/:itemType/top10" component={Top10} exact/>
+          <Route path="/reto4-what-can-i-watch/:itemType/search" component={SearchResults} exact/>
+          <Route path="/reto4-what-can-i-watch/movie/:movieId" component={DetailedMovie} exact/>
+          <Route path="/reto4-what-can-i-watch/tv/:seriesId" component={DetailedSeries} exact/>
+          <Route path="/">
+            <Redirect to="/reto4-what-can-i-watch/"/>
           </Route>
         </Switch>
       </BrowserRouter>      
