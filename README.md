@@ -1,3 +1,12 @@
+
+#### Tabla de contenidos
+
+[Qué puedo ver](#¿Qué-puedo-ver?)
+[Fase actual del desarrollo](##Fase-actual-del-desarrollo:-Desarrollo-finalizado-🚀)
+[Construido con](##Construido-con-🛠️)
+[Bugs conocidos](##Bugs-conocidos)
+[Scripts disponibles (funcionamiento)](##Scripts-Disponibles-(funcionamiento))
+
 # ¿Qué puedo ver?
 
 Reto final propuesto por el bootcamp de frontend online de GeeksHubsAcademy. Consiste en la elaboración de una webapp con react que permite obtener información detallada sobre series y películas a partir de la API de [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction).
@@ -10,7 +19,16 @@ La web permite obtener listados de las 10 películas o series más populares, as
 
 React, Redux, React Router, Bootstrap y Sass.
 
-## Scripts Disponibles
+## Bugs conocidos
+
+### Peticiones a la API para obtener listados de géneros (solucionado)
+La API de TMDB ofrece dos endpoints diferentes para obtener los listados de géneros de [películas](https://developers.themoviedb.org/3/genres/get-movie-list) y [series de televisión](https://developers.themoviedb.org/3/genres/get-tv-list), lo cual resulta muy útil para combinarlo con algunos endpoints, como por ejemplo los de las películas y series más populares. Esto es debido a que en la respuesta de la API se ofrecen ids de géneros en lugar del nombre, el cual podremos obtener al cruzarlo con las respectivas respuestas de las peticiones de listados de géneros.
+
+Se detectó un problema al encontrar casos de series y películas en los que el id de alguno de sus géneros no figuraba en los listados correspondientes, por lo que daba error al intentar renderizarlo. Al cotejar ambos listados, se descubrió no solo que los ids que no se localizara en uno de los listados de géneros se podía localizar en el otro, sino que además el id utilizado era el mismo para series y películas (es decir, el género "drama", por ejemplo, tiene el id 18 en ambos listados). Por lo tanto, se ajustó el software para crear un listado único de géneros para series y películas, pudiendo así renderizar sin problemas los géneros de ambas.
+
+[Ir al inicio](#Tabla-de-contenidos)
+
+## Scripts Disponibles (funcionamiento)
 
 En el directorio del proyecto puedes ejecutar:
 
@@ -47,8 +65,12 @@ En lugar de eso, copiará todos los ficheros de configuración y dependencias tr
 
 No necesitas usar `eject`. La característica incluida se adapta a despliegues pequeños y medianos y no deberías sentirte obligado a usarla. Sin embargo, entendemos que esta herramienta no sería útil no pudieras configurarla cuando estés listo para ello.
 
+[Ir al inicio](#Tabla-de-contenidos)
+
 ## Saber más
 
 Puedes aprender más en la [Documentación Crea una Aplicación en React](https://facebook.github.io/create-react-app/docs/getting-started).
 
 Para aprender React, comprueba la [Documentación de React](https://reactjs.org/).
+
+[Ir al inicio](#Tabla-de-contenidos)
